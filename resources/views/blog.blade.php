@@ -9,9 +9,9 @@
 	<p>Seri Tutorial Laravel Lengkap Dari Dasar</p>
 	<p>Ini adalah view blog. ada di route blog.</p>
     <p>
-        Nama : {{ $nama }} -
-        Alamat : {{ $alamat }} -
-        Umur : {{ $umur }}
+
+
+        <a href="/pegawai/{{date ('D, d M Y  h:i:sa') }}">Klik Disini</a>
     </p>
 </body>
 </html>
