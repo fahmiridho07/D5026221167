@@ -78,3 +78,4 @@ Route::post('/pegawai/update','App\Http\Controllers\PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus');
 
 Route::get('/pegawai/{nama}', 'App\Http\Controllers\DosenController@shownama');
+Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
