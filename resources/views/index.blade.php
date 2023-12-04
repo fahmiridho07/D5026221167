@@ -12,12 +12,20 @@
 @endsection
 
 @section('konten')
+    {{-- <div class="form-group">
+            <label for="nama" class="col-sm-2 control-label">Nama</label>
+            <div class="col-sm-10">
+                <input name="nama" type="text" class="form-control" id="nama" value="{{ $p->pegawai_nama }}" required="required" disabled>
+            </div>
+        </div> --}}
+
     <p>Cari Data Pegawai :</p>
-    <form action="/pegawai/cari" method="GET">
-        <input class="form form-control" type="text" name="cari" placeholder="Cari Pegawai Berdasarkan Nama..."
-            value="{{ old('cari') }}">
-        <input type="submit" value="CARI" class="btn btn-primary">
+    <form action="/pegawai/cari" class="d-flex" method="GET">
+        <input class='form-control w-fit' type="text" name="cari" placeholder="Cari pegawai berdasarkan nama ..." value="{{ old('cari') }}">
+        <button type="submit" class="btn btn-primary">CARI</button>
     </form>
+
+
     <table class="table table-striped table-hover">
         <tr>
             <th>Nama</th>
@@ -45,4 +53,5 @@
     {{ $pegawai->links() }}
 
 @endsection
+
 </html>

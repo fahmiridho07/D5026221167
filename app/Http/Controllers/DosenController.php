@@ -8,14 +8,14 @@ class DosenController extends Controller
 {
     //
     public function index()
-    {
-        $a = 3;
-        $a = 3;
-        $a = 3;
-        return "<h1>Hasil Perkalian = ";
-        (string)$c;
-        "</h1>";
-    }
+{
+    $a = 3;
+    $b = 4; // Assuming you want to multiply $a by $b
+    $c = $a * $b; // Perform the multiplication operation
+    $resultString = "<h1>Hasil Perkalian = " . $c . "</h1>";
+
+    return $resultString; // Return the string containing the result
+}
 
     public function showBlog($nama, $alamat, $umur)
     {

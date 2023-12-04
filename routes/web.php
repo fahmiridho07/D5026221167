@@ -63,6 +63,7 @@ Route::get('show', 'App\Http\Controllers\DosenController@showBlog');
 
 Route::get('/formulir', 'App\Http\Controllers\DosenController@formulir');
 Route::post('/formulir/proses', 'App\Http\Controllers\DosenController@proses');
+Route::get('/pegawai1/{nama}', 'App\Http\Controllers\DosenController@shownama');
 
 // route blog
 Route::get('/blog', 'App\Http\Controllers\BlogController@home');
@@ -77,5 +78,7 @@ Route::get('/pegawai/edit/{id}','App\Http\Controllers\PegawaiController@edit');
 Route::post('/pegawai/update','App\Http\Controllers\PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus');
 
-Route::get('/pegawai/{nama}', 'App\Http\Controllers\DosenController@shownama');
+Route::get('/pegawai1/{nama}', 'App\Http\Controllers\DosenController@shownama');
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
+
+Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
