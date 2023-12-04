@@ -39,6 +39,11 @@
                 <td>{{ $p->pegawai_nama }}</td>
                 <td>{{ $p->pegawai_jabatan }}</td>
                 <td>{{ $p->pegawai_umur }}</td>
+                @if($p->pegawai_umur > 30)
+                <td style="background-color: red; color: white;">{{ $p->pegawai_umur }}</td>
+                @else
+                <td style="background-color: black; color: white;">{{ $p->pegawai_umur }}</td>
+                @endif
                 <td>{{ $p->pegawai_alamat }}</td>
                 <td>
                     <a href="/pegawai/view/{{ $p->pegawai_id }}" class="btn btn-success">View</a>
