@@ -65,24 +65,33 @@ Route::get('/formulir', 'App\Http\Controllers\DosenController@formulir');
 Route::post('/formulir/proses', 'App\Http\Controllers\DosenController@proses');
 Route::get('/pegawai1/{nama}', 'App\Http\Controllers\DosenController@shownama');
 
+
 // route blog
 Route::get('/blog', 'App\Http\Controllers\BlogController@home');
 Route::get('/blog/tentang', 'App\Http\Controllers\BlogController@tentang');
 Route::get('/blog/kontak', 'App\Http\Controllers\BlogController@kontak');
 
-//CRUD
+//CRUD pegawai
 Route::get('/pegawai','App\Http\Controllers\PegawaiController@index');
 Route::get('/pegawai/tambah','App\Http\Controllers\PegawaiController@tambah');
 Route::post('/pegawai/store','App\Http\Controllers\PegawaiController@store');
 Route::get('/pegawai/edit/{id}','App\Http\Controllers\PegawaiController@edit');
 Route::post('/pegawai/update','App\Http\Controllers\PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus');
-
-Route::get('/pegawai1/{nama}', 'App\Http\Controllers\DosenController@shownama');
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
-
 Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
 
+//nilaikuliah
 Route::get('/nilaikuliah','App\Http\Controllers\NilaiKuliahController@index');
 Route::get('/nilaikuliah/tambahnilai','App\Http\Controllers\NilaiKuliahController@tambahnilai');
 Route::post('/nilaikuliah/storenilai','App\Http\Controllers\NilaiKuliahController@storenilai');
+
+//flashdisk
+Route::get('/flashdisk','App\Http\Controllers\FlashDiskController@index');
+Route::get('/flashdisk/tambah','App\Http\Controllers\FlashDiskController@tambah');
+Route::post('/flashdisk/store','App\Http\Controllers\FlashDiskController@store');
+Route::get('/flashdisk/edit/{id}','App\Http\Controllers\FlashDiskController@edit');
+Route::post('/flashdisk/update','App\Http\Controllers\FlashDiskController@update');
+Route::get('/flashdisk/hapus/{id}','App\Http\Controllers\FlashDiskController@hapus');
+Route::get('/flashdisk/cari','App\Http\Controllers\FlashDiskController@cari');
+Route::get('/flashdisk/view/{id}','App\Http\Controllers\FlashDiskController@view');

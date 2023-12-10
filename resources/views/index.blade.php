@@ -21,7 +21,8 @@
 
     <p>Cari Data Pegawai :</p>
     <form action="/pegawai/cari" class="d-flex" method="GET">
-        <input class='form-control w-fit' type="text" name="cari" placeholder="Cari pegawai berdasarkan nama ..." value="{{ old('cari') }}">
+        <input class='form-control w-fit' type="text" name="cari" placeholder="Cari pegawai berdasarkan nama ..."
+            value="{{ old('cari') }}">
         <button type="submit" class="btn btn-primary">CARI</button>
     </form>
 
@@ -38,12 +39,13 @@
             <tr>
                 <td>{{ $p->pegawai_nama }}</td>
                 <td>{{ $p->pegawai_jabatan }}</td>
-                <td>{{ $p->pegawai_umur }}</td>
-                @if($p->pegawai_umur > 30)
-                <td style="background-color: red; color: white;">{{ $p->pegawai_umur }}</td>
+                <td
+                    @if ($p->pegawai_umur <= 20) class="bg-success text-white"
+                @elseif ($p->pegawai_umur >= 21 && $p->pegawai_umur <= 30)
+                    class="bg-warning text-danger"
                 @else
-                <td style="background-color: black; color: white;">{{ $p->pegawai_umur }}</td>
-                @endif
+                    class="bg-primary text-white" @endif>
+                    {{ $p->pegawai_umur }}</td>
                 <td>{{ $p->pegawai_alamat }}</td>
                 <td>
                     <a href="/pegawai/view/{{ $p->pegawai_id }}" class="btn btn-success">View</a>
