@@ -95,3 +95,7 @@ Route::post('/flashdisk/update','App\Http\Controllers\FlashDiskController@update
 Route::get('/flashdisk/hapus/{id}','App\Http\Controllers\FlashDiskController@hapus');
 Route::get('/flashdisk/cari','App\Http\Controllers\FlashDiskController@cari');
 Route::get('/flashdisk/view/{id}','App\Http\Controllers\FlashDiskController@view');
+
+//kode soal CC
+Route::get('/kategori','App\Http\Controllers\KategoriController@index');
+Route::get('/kategori/hasilcombo','App\Http\Controllers\KategoriController@view');
